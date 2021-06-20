@@ -1,0 +1,40 @@
+footer {
+  /* background-color: aqua; 
+  
+
+  */
+}
+section {
+  border: 2px solid blue;
+  float: left;
+  width: 500px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#red {
+  color: red;
+  /*p block element */
+  background-color: black;
+}
+
+.green {
+  color: green;
+}
+img {
+  width: 300px;
+}
+article {
+  clear: both;
+}
+footer {
+  clear: both;
+}
+span {
+  border: 2px solid red;
+  width: 1000px;
+}
+li {
+  border: 1px solid blue;
+  display: inline-block;
+  width: 100px;
+}
