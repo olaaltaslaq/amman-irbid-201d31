@@ -1,0 +1,63 @@
+body {
+  /* border: 2px solid blue; */
+}
+main {
+  /* border: 2px solid red;
+  margin-top: 10px; */
+  /* position: relative; */
+}
+#parent {
+  background-color: #845ec2;
+  position: relative;
+  height: 1000px;
+  margin-top: 5%;
+  width: 50%;
+  padding: 50px;
+  /* when static the top and other positions will not be applied
+    top: 10px;
+    left: 10px;
+    */
+
+  /* margin: 100px 150px 100px 150px; */
+
+  /* top: 10px;
+    left: 10px;
+    position: relative;  */
+}
+div {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+}
+#one {
+  background-color: #ff5e78;
+  width: 10%;
+  height: 100px;
+  position: sticky;
+  top: 0px;
+  left: 100px;
+  /* top: 0px;
+    left: 10px;
+    position: sticky; */
+
+  /*if you put it as position relative it will move it from the old place */
+}
+#two {
+  background-color: #ffcc29;
+  width: 200px;
+  height: 100px;
+  /* top: 5px;
+    left: 100px;
+    position: relative; */
+}
+#three {
+  background-color: #295939;
+  width: 200px;
+  height: 100px;
+  /*you can put it anywhere you want but it will be relative to the container if it has position relative
+    it will search to an upper parent until it find a relative parent  */
+  /* position: absolute;  */
+}
+p {
+  font-family: "Dancing Script", cursive;
+}
