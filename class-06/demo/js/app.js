@@ -13,6 +13,132 @@
 // TODO: dynamically generate kitten objects 
 
 'use strict';
+let frankie = {
+    name: 'frankie',
+    age: 0,
+    likes: ['eating', 'playing', 'sleeping'],
+    image: 'images/frankie.jpeg',
+    gwk: true,
+    gwd: false,
+    gwc: true,
+    breed: 'balde',
+    getAge: function (min, max) {
+        this.age = Math.floor(Math.random() * (max - min + 1) + min);
+        // console.log(frankie.age);
+    },
+    render: function () {
+        let divEl = document.getElementById('kittenProfiles');
+        let articleEl = document.createElement('article');
+        divEl.appendChild(articleEl);
+
+        let h2El = document.createElement('h2');
+        articleEl.appendChild(h2El);
+        h2El.textContent = this.name;
+
+        let pEl = document.createElement('p');
+        pEl.textContent = `i'm ${this.age} months old`;
+        articleEl.appendChild(pEl);
+
+        let ulEl = document.createElement('ul');
+        for (let i = 0; i < this.likes.length; i++) {
+            let liEl = document.createElement('li');
+            liEl.textContent = this.likes[i];
+            ulEl.appendChild(liEl);
+        }
+        articleEl.appendChild(ulEl);
+
+        let imgEl = document.createElement('img');
+        imgEl.setAttribute('src', this.image);
+        articleEl.appendChild(imgEl);
+    }
+}
+frankie.getAge(1, 5);
+frankie.render();
+
+let jumper = {
+    name: 'jumper',
+    age: 0,
+    likes: ['eating', 'fighting', 'playing'],
+    image: 'images/jumper.jpeg',
+    gwk: true,
+    gwd: false,
+    gwc: true,
+    breed: 'balde',
+    getAge: function (min, max) {
+        this.age = Math.floor(Math.random() * (max - min + 1) + min);
+        // console.log(frankie.age);
+    },
+    render: function () {
+        let divEl = document.getElementById('kittenProfiles');
+        let articleEl = document.createElement('article');
+        divEl.appendChild(articleEl);
+
+        let h2El = document.createElement('h2');
+        articleEl.appendChild(h2El);
+        h2El.textContent = this.name;
+
+        let pEl = document.createElement('p');
+        pEl.textContent = `i'm ${this.age} months old`;
+        articleEl.appendChild(pEl);
+
+        let ulEl = document.createElement('ul');
+        for (let i = 0; i < this.likes.length; i++) {
+            let liEl = document.createElement('li');
+            liEl.textContent = this.likes[i];
+            ulEl.appendChild(liEl);
+        }
+        articleEl.appendChild(ulEl);
+
+        let imgEl = document.createElement('img');
+        imgEl.setAttribute('src', this.image);
+        articleEl.appendChild(imgEl);
+    }
+}
+jumper.getAge(1, 5);
+jumper.render();
+
+let serena = {
+    name: 'serena',
+    age: 0,
+    likes: ['eating', 'playing', 'sleeping'],
+    image: 'images/serena.jpeg',
+    gwk: true,
+    gwd: false,
+    gwc: true,
+    breed: 'balde',
+    getAge: function (min, max) {
+        serena.age = Math.floor(Math.random() * (max - min + 1) + min);
+        // console.log(frankie.age);
+    },
+    render: function () {
+        let divEl = document.getElementById('kittenProfiles');
+        let articleEl = document.createElement('article');
+        divEl.appendChild(articleEl);
+
+        let h2El = document.createElement('h2');
+        articleEl.appendChild(h2El);
+        h2El.textContent = this.name;
+
+        let pEl = document.createElement('p');
+        pEl.textContent = `i'm ${this.age} months old`;
+        articleEl.appendChild(pEl);
+
+        let ulEl = document.createElement('ul');
+        for (let i = 0; i < serena.likes.length; i++) {
+            let liEl = document.createElement('li');
+            liEl.textContent = this.likes[i];
+            ulEl.appendChild(liEl);
+        }
+        articleEl.appendChild(ulEl);
+
+        let imgEl = document.createElement('img');
+        imgEl.setAttribute('src', this.image);
+        articleEl.appendChild(imgEl);
+    }
+}
+
+serena.getAge(1, 5);
+serena.render();
 
 
 // object literals
