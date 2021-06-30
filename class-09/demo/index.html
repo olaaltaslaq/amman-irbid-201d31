@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adopt a Kitten</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Adopt a Kitten</h1>
+    </header>
+    <main>
+      <h2>Kittens Available for Adoption:</h2>
+      <form action="" id="myForm">
+        <fieldset>
+          <legend>adding new kitten</legend>
+          <label for="catName">cat name:</label>
+          <input
+            type="text"
+            id="catName"
+            name="catName"
+            placeholder="cat name"
+          />
+          <label for="likes">likes</label>
+          <input type="text" id="likes" name="likes" placeholder="split by ," />
+
+          <label for="img">cat image</label>
+          <input type="text" name="img" id="img" />
+
+          <input type="checkbox" name="isGoodWithKids" id="isGoodWithKids" />
+          <label for="isGoodWithKids">isGoodWithKids</label>
+
+          <input type="checkbox" name="isGoodWithDogs" id="isGoodWithDogs" />
+          <label for="isGoodWithDogs">isGoodWithDogs</label>
+
+          <input
+            type="checkbox"
+            name="isGoodWithOtherCats"
+            id="isGoodWithOtherCats"
+          />
+          <label for="isGoodWithOtherCats">isGoodWithOtherCats</label>
+          <label for="breed">breed</label>
+          <input type="text" name="breed" id="breed" />
+
+          <input type="submit" value="add a cat" />
+        </fieldset>
+      </form>
+      <div id="kittenProfiles"></div>
+    </main>
+    <footer></footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>
