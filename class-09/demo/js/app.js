@@ -69,6 +69,7 @@ frankie.render();
 let jumper = new Kitten('jumper', ['eating', 'fighting', 'playing'], 'images/jumper.jpeg', true, false, false, 'sheraz');
 jumper.getAge(1, 5);
 jumper.render();
+
 let serena = new Kitten('serena', ['eating', 'sleeping', 'napping'], 'images/serena.jpeg', true, true, true, 'baldee');
 serena.getAge(1, 6);
 serena.render();

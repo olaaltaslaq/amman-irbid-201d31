@@ -4,6 +4,12 @@ let container = document.getElementById('container');
 let tableEl = document.createElement('table');
 container.appendChild(tableEl);
 
+Shop.prototype.calAvgCookiesPerH = function () {
+    for (let i = 0; i < hours.length; i++) {
+        this.avgCookiesPerH[i] = Math.ceil(this.randCusts[i] * this.avgCookies);
+        this.total = this.total + this.avgCookiesPerH[i];
+    }
+}
 let shops = [];
 function Shop(shopName, min, max, avg) {
     this.shopName = shopName;
@@ -17,18 +23,13 @@ function Shop(shopName, min, max, avg) {
 }
 Shop.prototype.calcRandCustPerH = function () {
     for (let i = 0; i < hours.length; i++) {
-        let min = Math.ceil(this.minCust);
-        let max = Math.floor(this.maxCust);
+        // let min = Math.ceil(this.minCust);
+        // let max = Math.floor(this.maxCust);
         let randCust = Math.floor(Math.random() * (max - min + 1) + min);
         this.randCusts.push(randCust);
     }
 }
-Shop.prototype.calAvgCookiesPerH = function () {
-    for (let i = 0; i < hours.length; i++) {
-        this.avgCookiesPerH[i] = Math.ceil(this.randCusts[i] * this.avgCookies);
-        this.total = this.total + this.avgCookiesPerH[i];
-    }
-}
+
 Shop.prototype.render = function () {
     let trEl = document.createElement('tr');
     let tdEl = document.createElement('td');
