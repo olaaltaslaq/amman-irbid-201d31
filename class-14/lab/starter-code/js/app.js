@@ -8,15 +8,18 @@ const Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  let newItem = new CartItem(product, quantity);
+  this.items.push(newItem);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
-  // TODO: Fill in this instance method to save the contents of the cart to localStorage
-};
-
+  // TODO: Fill in this instance method to save the contents of the cart to localStorage};
+  localStorage.setItem('cart', JSON.stringify(this.items))
+}
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  this.items.splice(item, 1);
 };
 
 const CartItem = function(product, quantity) {
@@ -50,6 +53,7 @@ function generateCatalog() {
   new Product('assets/sweep.png', 'Sweep');
   new Product('assets/tauntaun.jpg', 'Taun-Taun');
   new Product('assets/unicorn.jpg', 'Unicorn');
+  new Product('assets/usb.gif', 'USB');
   new Product('assets/water-can.jpg', 'Water Can');
   new Product('assets/wine-glass.jpg', 'Wine Glass');
 }
